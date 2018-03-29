@@ -9,8 +9,8 @@ class Solution {
         var hashMap = [Int: Int]()
         var result = [Int]()
         for i in 0..<numbers.count {
-            let numberToFind = target - numbers[i]
-            if let numberToFindIndex = hashMap[i] {
+            let numberToFind = target - numbers[i] - 1
+            if let numberToFindIndex = hashMap[numberToFind] {
                 result.append(numberToFindIndex)
                 result.append(i)
                 
